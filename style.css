@@ -7,7 +7,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Фоновое мерцание */
+
 .bg-glow {
     position: fixed;
     width: 500px;
@@ -31,7 +31,7 @@ body {
     100% { transform: scale(1.2); opacity: 0.6; }
 }
 
-/* ШАПКА */
+
 .top-header {
     position: fixed;
     top: 0;
@@ -64,8 +64,7 @@ body {
     gap: 15px;
 }
 
-/* ЛОГИКА СКРЫТИЯ КНОПКИ ГЛАВНАЯ */
-/* Если мы на главной странице — скрываем кнопку "Главная" и центрируем логотип */
+
 body.on-main-page .nav-main-btn { 
     display: none; 
 }
@@ -74,7 +73,7 @@ body.on-main-page .top-header {
     padding: 15px 40px;
 }
 
-/* ГЛАНЦЕВЫЕ КНОПКИ */
+
 .glossy-btn {
     position: relative;
     padding: 12px 25px;
@@ -107,7 +106,7 @@ body.on-main-page .top-header {
     text-shadow: 0 0 5px #fff;
 }
 
-/* СЕКЦИИ ВКЛАДОК */
+
 .page-section {
     display: none;
     padding-top: 110px; 
@@ -120,7 +119,7 @@ body.on-main-page .top-header {
     display: block;
 }
 
-/* КАРТОЧКА НА ГЛАВНОЙ */
+
 .main-card-hub {
     text-align: center;
     max-width: 680px;
@@ -147,7 +146,7 @@ body.on-main-page .top-header {
     margin: 0 0 20px 0;
 }
 
-/* Сноска на полное прочтение */
+
 .read-more-link {
     color: #ff0000;
     cursor: pointer;
@@ -176,7 +175,7 @@ body.on-main-page .top-header {
     flex-wrap: wrap;
 }
 
-/* БИОГРАФИЯ И ТАЙМЛАЙН */
+
 .full-page-content {
     max-width: 800px;
     margin: 30px auto;
