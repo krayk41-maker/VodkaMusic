@@ -27,3 +27,4 @@ function openTab(tabId) {
 document.addEventListener("DOMContentLoaded", () => {
     openTab('main-page');
 });
+// fix
