@@ -1,0 +1,483 @@
+/* css/style.css */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    background:#050505;
+
+    color:white;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    overflow-x:hidden;
+
+}
+
+
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,#ffc10718,transparent 35%),
+    radial-gradient(circle at bottom,#ff8c0010,transparent 40%);
+
+    z-index:-2;
+
+}
+
+
+
+
+.header{
+
+    height:90px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-bottom:1px solid #222;
+
+    background:#000;
+
+    position:relative;
+
+}
+
+
+
+.logo{
+
+    font-size:36px;
+
+    font-weight:900;
+
+    letter-spacing:8px;
+
+}
+
+
+
+.intro{
+
+    min-height:45vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+
+
+.intro h1{
+
+    font-size:75px;
+
+    font-weight:900;
+
+    color:#ffc107;
+
+    animation:show .8s ease;
+
+}
+
+
+
+.intro p{
+
+    margin-top:25px;
+
+    color:#ddd;
+
+    font-size:22px;
+
+}
+
+
+
+
+.artists{
+
+    width:1200px;
+
+    max-width:90%;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:40px;
+
+}
+
+
+
+
+.artist-card{
+
+    position:relative;
+
+    min-height:340px;
+
+    padding:40px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    background:#111;
+
+    border-radius:25px;
+
+    border:1px solid #222;
+
+    overflow:visible;
+
+    animation:show .8s ease;
+
+    transition:.3s;
+
+    z-index:1;
+
+}
+
+
+
+.artist-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:var(--x);
+
+    top:var(--y);
+
+    width:300px;
+
+    height:300px;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    filter:blur(80px);
+
+    opacity:0;
+
+    transition:.25s;
+
+    z-index:-1;
+
+}
+
+
+
+.artist-card:hover::before{
+
+    opacity:1;
+
+}
+
+
+
+.green::before{
+
+    background:#00ff66;
+
+}
+
+
+
+.red::before{
+
+    background:#ff3030;
+
+}
+
+
+
+.orange::before{
+
+    background:#ff9500;
+
+}
+
+
+
+
+.artist-card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+
+
+.artist-card h2{
+
+    font-size:32px;
+
+}
+
+
+
+.artist-card p{
+
+    color:#ccc;
+
+    line-height:28px;
+
+    margin:25px 0;
+
+}
+
+
+
+.artist-btn{
+
+    height:55px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#ffc107;
+
+    color:#000;
+
+    border-radius:15px;
+
+    text-decoration:none;
+
+    font-weight:800;
+
+    transition:.3s;
+
+}
+
+
+
+.artist-btn:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+
+
+
+footer{
+
+    margin-top:120px;
+
+    border-top:1px solid #222;
+
+    overflow:hidden;
+
+}
+
+
+
+
+.marquee{
+
+    padding:25px 0;
+
+    background:#ffc107;
+
+    overflow:hidden;
+
+}
+
+
+
+.track{
+
+    display:flex;
+
+    width:max-content;
+
+    animation:move 15s linear infinite;
+
+}
+
+
+
+.track span{
+
+    white-space:nowrap;
+
+    margin-right:80px;
+
+    color:#000;
+
+    font-size:32px;
+
+    font-weight:900;
+
+    letter-spacing:5px;
+
+}
+
+
+
+@keyframes move{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(-50%);
+
+    }
+
+}
+
+
+
+@keyframes show{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+#particles span{
+
+    position:fixed;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    animation:explode .8s forwards;
+
+}
+
+
+
+
+@keyframes explode{
+
+    from{
+
+        transform:translate(0,0);
+
+        opacity:1;
+
+    }
+
+
+    to{
+
+        transform:translate(var(--x),var(--y));
+
+        opacity:0;
+
+    }
+
+}
+
+
+
+.back{
+
+    position:absolute;
+
+    left:40px;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+}
+
+
+
+.back:hover{
+
+    color:#ffc107;
+
+}
+
+
+
+
+
+@media(max-width:1000px){
+
+
+.artists{
+
+grid-template-columns:1fr;
+
+}
+
+
+.intro h1{
+
+font-size:50px;
+
+}
+
+
+.logo{
+
+font-size:25px;
+
+}
+
+
+}
